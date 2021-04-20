@@ -3,7 +3,7 @@ FreeBSD ports-built binary packages
 # Notice
 Please avoid mixing and matching these, ports, and main pkg installs. You will have a bad time.
 
-Jails are easy and quick to make. How about one service per jail? I will help prevent the bad time.
+Jails are easy and quick to make. How about one service per jail? It will help prevent the bad time.
 
 ## What is here currently:
 - sabnzbdplus 3.2.0 (works around tbb no longer building)
