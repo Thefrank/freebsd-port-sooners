@@ -16,6 +16,7 @@ Jails are easy and quick to make. How about one service per jail? It will help p
 
 - Ombi v4 (dotnet5 variant, experimental, binary only NO PKG OR SERVICE)
 
+- Jackett (dotnet5 variant, experimental, binary only NO PKG OR SERVICE)
 
 ## Updates
 Open a ticket if I fall behind on something. 
