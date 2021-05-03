@@ -6,7 +6,7 @@ Please avoid mixing and matching these, ports, and main pkg installs. You will h
 Jails are easy and quick to make. How about one service per jail? It will help prevent the bad time.
 
 ## What is here currently:
-- sabnzbdplus 3.2.0 (works around tbb no longer building)
+- sabnzbdplus 3.2.1 (works around tbb no longer building, feedburner issues)
 
 - radarr 3.1.0.4625 (dotnet5 variant) (this can be updated via built-in updater)
   - This currently tracks "nightly" but May/June 2021 will track "master" to match FreeBSD port naming better. Avoid using this package until then unless absolutely necessary!
