@@ -8,8 +8,9 @@ Jails are easy and quick to make. How about one service per jail? It will help p
 ## What is here currently:
 - sabnzbdplus 3.2.1 (works around tbb no longer building, feedburner issues)
 
-- radarr 3.1.0.4625 (dotnet5 variant) (this can be updated via built-in updater)
-  - This currently tracks "nightly" but May/June 2021 will track "master" to match FreeBSD port naming better. Avoid using this package until then unless absolutely necessary!
+- radarr 3.1.1.4954 (dotnet5 variant) (this can be updated via built-in updater)
+  - This now tracks "master"! Older versions tracked "nightly"!
+  - package named `radarrv3` as a way to deconflict with existing mono-based `radarr`
  
 - radarr-devel 3.1.0.4893 (dotnet5 variant) (this can be updated via built-in updater)
   - This currently tracks "develop" to better match FreeBSD port naming
