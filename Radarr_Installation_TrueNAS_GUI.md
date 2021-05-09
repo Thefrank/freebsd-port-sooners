@@ -78,3 +78,8 @@ Almost done, let's start the service:
 If everything went according to plan then radarr should be up and running on the IP of the jail!
 
 (You can now safely close the shell)
+
+
+## Troubleshooting
+ - `System.Net.Sockets.SocketException (43): Protocol not supported`
+   - Make sure you have `VNET` turned on for your jail.
