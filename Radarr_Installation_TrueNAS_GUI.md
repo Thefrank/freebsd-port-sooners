@@ -6,9 +6,9 @@ If you are not comfortable setting up a jail or using the shell please wait unti
 
 If you are installing from base FreeBSD there is a different guide for that or you can adopt this as an general overview.
 
-This guide will use `Radarrv3-devel` until there is a `master` release for it. `Radarrv3` and `Radarrv3-devel` packages are not compatible with eachother by design.
+This guide will use `radarrv3`. `radarrv3` and `radarrv3-devel` packages are not compatible with eachother by design.
 
-Going foward, `Radarrv3` will track `master` and `Radarr-devel` will track `develop` to be more consistent with FreeBSD port naming. As of writing THIS IS NOT THE CASE.
+Going foward, `radarrv3` will track `master` and `radarr-devel` will track `develop` to be more consistent with FreeBSD port naming. Releases before May 2021 do not follow this!
 
 ## Jail Setup
 1. From the main screen select Jails
@@ -57,7 +57,7 @@ Now that we have it installed a few more steps are required.
 
 ### Service Setup
 
-Time to enable the service but before we do a note:
+Time to enable the service but before we do, a note:
 
 The service file uses `chown` to make sure radarr can update itself. This can break things like `pkg check -s` and `pkg remove` for radarr when the built-in updater replaces files.
 
