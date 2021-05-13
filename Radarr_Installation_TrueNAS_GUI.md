@@ -43,11 +43,11 @@ Download the version you want you can find the releases of Radarr here: https://
 
 You can just copy and paste the full download URL and `fetch` will be able to download it. Here is an example:
 
-`fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/20210420/Radarrv3-devel-3.1.0.4893.txz`
+`fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/20210504/radarrv3-3.1.1.4954.txz`
 
 Now we install it:
 
-`pkg install Radarrv3-devel-3.1.0.4893.txz`
+`pkg install radarrv3-3.1.1.4954.txz`
 
 Don't close the shell out yet we still have a few more things!
 
