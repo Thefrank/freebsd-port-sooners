@@ -16,6 +16,10 @@ Jails are easy and quick to make. How about one service per jail? It will help p
 - radarr-devel 3.1.0.4893 (dotnet5 variant) (this can be updated via built-in updater)
   - This currently tracks "develop" to better match FreeBSD port naming
 
+- sonarr 3.0.6.1196 (mono) (`mono6.8>0:lang/mono6.8` instead of `USES=MONO`)
+  - This gets rid of the message about using an ancient version of mono. 
+  - I will bump this to mono6.12 when it comes to ports. if not handled by maintainer before that.
+
 - Ombi v4 (dotnet5 variant, experimental, binary only NO PKG OR SERVICE)
 
 - Jackett (dotnet5 variant, experimental, binary only NO PKG OR SERVICE)
