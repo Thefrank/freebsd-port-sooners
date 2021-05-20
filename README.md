@@ -9,7 +9,7 @@ Jails are easy and quick to make. How about one service per jail? It will help p
 - ~~sabnzbdplus 3.2.1 (works around tbb no longer building, feedburner issues)~~ 
   - REMOVED. PORT UPDATED.
 
-- radarr 3.1.1.4954 (dotnet5 variant) (this can be updated via built-in updater)
+- radarr 3.2.0.5048 (dotnet5 variant) (this can be updated via built-in updater)
   - This now tracks "master"! Older versions tracked "nightly"!
   - package named `radarrv3` as a way to deconflict with existing mono-based `radarr`
  
