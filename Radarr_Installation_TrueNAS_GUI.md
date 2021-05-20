@@ -4,11 +4,9 @@ Radarr's dotNET version currently does not use the plugin system that TrueNAS us
 
 If you are not comfortable setting up a jail or using the shell please wait until someone adds it to the community plugin libary.
 
-If you are installing from base FreeBSD there is a different guide for that or you can adopt this as an general overview.
+If you are installing from base FreeBSD you can adopt this guide as an general overview. TrueNAS uses `iocage` as jail manager so jail properties listed here will use its variable naming.
 
 This guide will use `radarrv3`. `radarrv3` and `radarrv3-devel` packages are not compatible with eachother by design.
-
-Going foward, `radarrv3` will track `master` and `radarr-devel` will track `develop` to be more consistent with FreeBSD port naming. Releases before May 2021 do not follow this!
 
 ## Jail Setup
 1. From the main screen select Jails
@@ -39,15 +37,15 @@ Going foward, `radarrv3` will track `master` and `radarr-devel` will track `deve
 
 Back on the jails list find your newly created jail for `radarr` and click "Shell"
 
-Download the version you want you can find the releases of Radarr here: https://github.com/Thefrank/freebsd-port-sooners/releases
+Download the version you want. You can find the releases of Radarr here: https://github.com/Thefrank/freebsd-port-sooners/releases
 
 You can just copy and paste the full download URL and `fetch` will be able to download it. Here is an example:
 
-`fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/20210504/radarrv3-3.1.1.4954.txz`
+`fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/20210520/radarrv3-3.2.0.5048.txz`
 
 Now we install it:
 
-`pkg install radarrv3-3.1.1.4954.txz`
+`pkg install radarrv3-3.2.0.5048.txz`
 
 Don't close the shell out yet we still have a few more things!
 
