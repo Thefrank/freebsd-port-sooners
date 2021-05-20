@@ -24,6 +24,10 @@ Jails are easy and quick to make. How about one service per jail? It will help p
 
 - Jackett (dotnet5 variant, experimental, binary only NO PKG OR SERVICE)
 
+- tautulli 2.7.2 (version bump from 2.5.5, bump python to `USES=python:3.6+`)
+  - built under FreeBSD 12.2.
+  - bytecompiled python code
+  
 ## Updates
 Open a ticket if I fall behind on something. 
 
