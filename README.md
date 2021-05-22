@@ -18,12 +18,17 @@ Jails are easy and quick to make. How about one service per jail? It will help p
 
 - sonarr 3.0.6.1196 (mono) (`mono6.8>0:lang/mono6.8` instead of `USES=MONO`)
   - This gets rid of the message about using an ancient version of mono. 
-  - I will bump this to mono6.12 when it comes to ports. if not handled by maintainer before that.
+  - I will bump this to mono6.12 when it comes to ports, if not handled by maintainer before that.
+  - mono < 6.12 contains a security issue on all non-windows platforms.
 
 - Ombi v4 (dotnet5 variant, experimental, binary only NO PKG OR SERVICE)
 
-- Jackett (dotnet5 variant, experimental, binary only NO PKG OR SERVICE)
-
+- jackettdotnet 0.18.98 (dotnet5 variant, experimental, installable txz + service file)
+  - different portname! Please `pkg remove jackett` before installing!
+  - different service name! Please use `jackettdotnet` for your `sysrc` settings (e.g., `sysrc jackettdotnet_enable=YES`)
+  - uses `chown` in service file to set correct user assuming you installed the package as root
+  - no way to update: dev currently does not build for FreeBSD so update check will always fail
+  
 - tautulli 2.7.2 (version bump from 2.5.5, bump python to `USES=python:3.6+`)
   - built under FreeBSD 12.2.
   - bytecompiled python code
