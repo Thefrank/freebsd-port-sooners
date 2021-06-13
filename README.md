@@ -29,9 +29,8 @@ Jails are easy and quick to make. How about one service per jail? It will help p
   - uses `chown` in service file to set correct user assuming you installed the package as root
   - no way to update: dev currently does not build for FreeBSD so update check will always fail
   
-- tautulli 2.7.2 (version bump from 2.5.5, bump python to `USES=python:3.6+`)
-  - built under FreeBSD 12.2.
-  - bytecompiled python code
+- ~~tautulli 2.7.2 (version bump from 2.5.5, bump python to `USES=python:3.6+`)~~
+  - REMOVED. PORT UPDATED.
   
 ## Updates
 Open a ticket if I fall behind on something. 
