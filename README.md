@@ -9,9 +9,11 @@ Jails are easy and quick to make. How about one service per jail? It will help p
 - ~~sabnzbdplus 3.2.1 (works around tbb no longer building, feedburner issues)~~ 
   - REMOVED. PORT UPDATED.
 
-- radarr 3.2.0.5048 (dotnet5 variant) (this can be updated via built-in updater)
+- radarr 3.2.2.5080 (dotnet5 variant) (this can be updated via built-in updater)
   - This now tracks "master"! Older versions tracked "nightly"!
   - package named `radarrv3` as a way to deconflict with existing mono-based `radarr`
+    - still uses same name for service file to stop people from trying to install one over the other
+  - now actually complies with `portfmt` and `portlint`
  
 - radarr-devel 3.1.0.4893 (dotnet5 variant) (this can be updated via built-in updater)
   - This currently tracks "develop" to better match FreeBSD port naming
@@ -39,3 +41,4 @@ Open a ticket if the port has caught up so I can remove the now-duplicated packa
 
 ## One more thing
 Microsoft does not currently official support dotNET5 on FreeBSD so "dotnet5 variant" packages and binaries might have limited support across FreeBSD versions.
+Getting dotNET to work under FreeBSD is becoming more and more of a challenge after each preview of dotNET6, if you are knowledgeable in the inner-workings of FreeBSD please drop over to https://github.com/dotnet/runtime/issues/14537 and see if you can help. Finally, dotNET5 goes EOL only a few months after dotNET6 goes live which means that dotnet5 will no longer be seeing any updates starting as soon as Feburary 2022!
