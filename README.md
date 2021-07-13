@@ -6,8 +6,8 @@ Please avoid mixing and matching these, ports, and main pkg installs. You will h
 Jails are easy and quick to make. How about one service per jail? It will help prevent the bad time.
 
 ## What is here currently:
-- ~~sabnzbdplus 3.2.1 (works around tbb no longer building, feedburner issues)~~ 
-  - REMOVED. PORT UPDATED.
+- sabnzbdplus 3.3.1
+  - Version bump.
 
 - radarr 3.2.2.5080 (dotnet5 variant) (this can be updated via built-in updater)
   - This now tracks "master"! Older versions tracked "nightly"!
