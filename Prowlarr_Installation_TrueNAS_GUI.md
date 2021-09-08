@@ -76,7 +76,7 @@ Almost done, let's start the service:
 
 `service prowlarr start`
 
-If everything went according to plan then prowlarr should be up and running on the IP of the jail!
+If everything went according to plan then prowlarr should be up and running on the IP of the jail (port 9696)!
 
 (You can now safely close the shell)
 
