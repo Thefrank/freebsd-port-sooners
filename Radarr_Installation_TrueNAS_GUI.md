@@ -73,7 +73,7 @@ Almost done, let's start the service:
 
 `service radarr start`
 
-If everything went according to plan then radarr should be up and running on the IP of the jail!
+If everything went according to plan then radarr should be up and running on the IP of the jail (port 7878)!
 
 (You can now safely close the shell)
 
