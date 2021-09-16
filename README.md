@@ -36,7 +36,10 @@ Jails are easy and quick to make. How about one service per jail? It will help p
   - REMOVED. PORT UPDATED.
 
 - prowlarr-0.1.1.875.txz (dotnet5 variant) (this can be updated via built-in updater)
+  - If you are using a package of prowlarr from BEFORE 2021-09-16 then I suggest a fresh install. 
+   - I changed where `prowlarr` stores its data. It can now be updated without giving warnings.
   - This currently tracks "develop" as there is no stable release for this yet
+  - Now actually complies with `portfmt` and `portlint`
   - More info: https://github.com/Prowlarr/Prowlarr
 
 ## What is NOT here:
