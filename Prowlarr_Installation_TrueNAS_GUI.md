@@ -44,11 +44,11 @@ Download the version you want. You can find the releases of Prowlarr here: https
 
 You can just copy and paste the full download URL and `fetch` will be able to download it. Here is an example:
 
-`fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/20210821/prowlarr-0.1.1.842.txz`
+`fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/20210821/prowlarr-0.1.1.875.txz`
 
 Now we install it:
 
-`pkg install prowlarr-0.1.1.842.txz`
+`pkg install prowlarr-0.1.1.875.txz`
 
 Don't close the shell out yet we still have a few more things!
 
@@ -71,6 +71,12 @@ If you do not want to use user/group `prowlarr` you will need to tell the servic
 `sysrc prowlarr_user="USER_YOU_WANT"`
 
 `sysrc prowlarr_group="GROUP_YOU_WANT"`
+
+`prowlarr` stores its data, config, logs, and PID files in `/usr/local/data/prowlarr` by default. The service file will create this and take ownership of it IF AND ONLY IF IT DOES NOT EXIST. If you want to store these files in a different place (e.g., a dataset mounted into the jail for easier snapshots) then you will need to change it using `sysrc`
+
+`sysrc prowlarr_data_dir="DIR_YOU_WANT"`
+
+Reminder: If you are using an existing location then you will manually need to either: change the ownership to the UID/GID `prowlarr` uses AND/OR add `prowlarr` to a GID that has write access.
 
 Almost done, let's start the service:
 
