@@ -35,7 +35,7 @@ Jails are easy and quick to make. How about one service per jail? It will help p
 - ~~tautulli 2.7.2 (version bump from 2.5.5, bump python to `USES=python:3.6+`)~~
   - REMOVED. PORT UPDATED.
 
-- prowlarr-0.1.1.842.txz (dotnet5 variant) (this can be updated via built-in updater)
+- prowlarr-0.1.1.875.txz (dotnet5 variant) (this can be updated via built-in updater)
   - This currently tracks "develop" as there is no stable release for this yet
   - More info: https://github.com/Prowlarr/Prowlarr
 
