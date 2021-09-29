@@ -5,9 +5,18 @@ Please avoid mixing and matching these, ports, and main pkg installs. You will h
 
 Jails are easy and quick to make. How about one service per jail? It will help prevent the bad time.
 
+# INCOMING FORMAT CHANGE
+Ports built after September 29th 2021 are built with pkg >= 17.0. 
+
+They will use `pkg` as the file extension and require pkg >= 17.0.
+
+These port will also more accurately use the canonical default install locations. These changes will be noted for each port.
+
 ## What is here currently:
-- sabnzbdplus 3.3.1
-  - Version bump.
+- sabnzbdplus 3.4.1
+  - Version bump. 
+  - NOTE: This needs TWO python3 packages from pip that are not in ports: `puremagic` and `guessit`. You will need to `pkg install py38-pip` if you do not have it either
+   - `python3.8 -m pip install puremagic` && `python3 -m pip install guessit`. If you just want to copy/paste.
 
 - radarr 3.2.2.5080 (dotnet5 variant) (this can be updated via built-in updater)
   - This now tracks "master"! Older versions tracked "nightly"!
