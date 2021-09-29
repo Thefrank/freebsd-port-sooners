@@ -32,7 +32,7 @@ These port will also more accurately use the canonical default install locations
   - This gets rid of the message about using an ancient version of mono. 
   - I will bump this to mono6.12 when it comes to ports, if not handled by maintainer before that.
   - mono < 6.12 contains a security issue on all non-windows platforms.
-  - THIS USES THE NEWS PKG FORMAT
+  - THIS USES THE NEW PKG FORMAT
 
 - Ombi v4 (dotnet5 variant, experimental, binary only NO PKG OR SERVICE)
 
