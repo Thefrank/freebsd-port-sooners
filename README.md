@@ -15,6 +15,7 @@ These port will also more accurately use the canonical default install locations
 ## What is here currently:
 - sabnzbdplus 3.4.1
   - Version bump. 
+  - THIS USES THE NEW PKG FORMAT
   - NOTE: This needs TWO python3 packages from pip that are not in ports: `puremagic` and `guessit`. You will need to `pkg install py38-pip` if you do not have it either
    - `python3.8 -m pip install puremagic` && `python3.8 -m pip install guessit`. If you just want to copy/paste.
 
@@ -27,10 +28,11 @@ These port will also more accurately use the canonical default install locations
 - radarr-devel 3.1.0.4893 (dotnet5 variant) (this can be updated via built-in updater)
   - This currently tracks "develop" to better match FreeBSD port naming
 
-- sonarr 3.0.6.1265 (mono) (`mono6.8>0:lang/mono6.8` instead of `USES=MONO`)
+- sonarr 3.0.6.1335 (mono) (`mono6.8>0:lang/mono6.8` instead of `USES=MONO`)
   - This gets rid of the message about using an ancient version of mono. 
   - I will bump this to mono6.12 when it comes to ports, if not handled by maintainer before that.
   - mono < 6.12 contains a security issue on all non-windows platforms.
+  - THIS USES THE NEWS PKG FORMAT
 
 - Ombi v4 (dotnet5 variant, experimental, binary only NO PKG OR SERVICE)
 
