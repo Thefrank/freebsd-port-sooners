@@ -6,9 +6,9 @@ Please avoid mixing and matching these, ports, and main pkg installs. You will h
 Jails are easy and quick to make. How about one service per jail? It will help prevent the bad time.
 
 # INCOMING FORMAT CHANGE
-Ports built after September 29th 2021 are built with pkg >= 17.0. 
+Ports built after September 29th 2021 are built with pkg >= 1.17.0. 
 
-They will use `pkg` as the file extension and require pkg >= 17.0.
+They will use `pkg` as the file extension and require pkg >= 1.17.0.
 
 These port will also more accurately use the canonical default install locations. These changes will be noted for each port.
 
@@ -28,11 +28,8 @@ These port will also more accurately use the canonical default install locations
 - radarr-devel 3.1.0.4893 (dotnet5 variant) (this can be updated via built-in updater)
   - This currently tracks "develop" to better match FreeBSD port naming
 
-- sonarr 3.0.6.1335 (mono) (`mono6.8>0:lang/mono6.8` instead of `USES=MONO`)
-  - This gets rid of the message about using an ancient version of mono. 
-  - I will bump this to mono6.12 when it comes to ports, if not handled by maintainer before that.
-  - mono < 6.12 contains a security issue on all non-windows platforms.
-  - THIS USES THE NEW PKG FORMAT
+- ~~sonarr 3.0.6.1335 (mono) (`mono6.8>0:lang/mono6.8` instead of `USES=MONO`)~~
+  - PORT NOW USES MONO6.8. REMOVED.
 
 - Ombi v4 (dotnet5 variant, experimental, binary only NO PKG OR SERVICE)
 
@@ -46,9 +43,10 @@ These port will also more accurately use the canonical default install locations
 - ~~tautulli 2.7.2 (version bump from 2.5.5, bump python to `USES=python:3.6+`)~~
   - REMOVED. PORT UPDATED.
 
-- prowlarr-0.1.1.875.txz (dotnet5 variant) (this can be updated via built-in updater)
+- prowlarr-0.1.1.978 (dotnet5 variant) (this can be updated via built-in updater)
   - If you are using a package of prowlarr from BEFORE 2021-09-16 then I suggest a fresh install. 
-   - I changed where `prowlarr` stores its data. It can now be updated without giving warnings.
+   - I changed where `prowlarr` stores its data. It can now be updated without giving warnings. CHECK THE RC FILE FOR THE NEW DEFAULTS!
+   - It now uses `prowlarrdotnet` for service/pkg name.
   - This currently tracks "develop" as there is no stable release for this yet
   - Now actually complies with `portfmt` and `portlint`
   - More info: https://github.com/Prowlarr/Prowlarr
@@ -62,5 +60,5 @@ Open a ticket if I fall behind on something.
 Open a ticket if the port has caught up so I can remove the now-duplicated package.
 
 ## One more thing
-Microsoft does not currently official support dotNET5 on FreeBSD so "dotnet5 variant" packages and binaries might have limited support across FreeBSD versions.
-Getting dotNET to work under FreeBSD is becoming more and more of a challenge after each preview of dotNET6, if you are knowledgeable in the inner-workings of FreeBSD please drop over to https://github.com/dotnet/runtime/issues/14537 and see if you can help. Finally, dotNET5 goes EOL only a few months after dotNET6 goes live which means that dotnet5 will no longer be seeing any updates starting as soon as Feburary 2022!
+Microsoft does not currently official support dotNET5+ on FreeBSD so "dotnet# variant" packages and binaries might have limited support across FreeBSD versions.
+If you would like to help out please drop over to https://github.com/dotnet/runtime/issues/14537 and see if you can.
