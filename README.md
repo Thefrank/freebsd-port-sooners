@@ -6,9 +6,9 @@ Please avoid mixing and matching these, ports, and main pkg installs. You will h
 Jails are easy and quick to make. How about one service per jail? It will help prevent the bad time.
 
 # INCOMING FORMAT CHANGE
-Ports built after September 29th 2021 are built with pkg >= 1.17.0. 
+Ports built after September 29th 2021 are built with `pkg` >= 1.17.0. 
 
-They will use `pkg` as the file extension and require pkg >= 1.17.0.
+They will use `pkg` as the file extension and require `pkg` >= 1.17.0.
 
 These port will also more accurately use the canonical default install locations. These changes will be noted for each port.
 
@@ -33,7 +33,7 @@ These port will also more accurately use the canonical default install locations
 
 - Ombi v4 (dotnet5 variant, experimental, binary only NO PKG OR SERVICE)
 
-- jackettdotnet 0.18.475 (dotnet5 variant, experimental, installable txz + service file)
+- jackett 0.18.475 (dotnet5 variant, experimental, installable txz + service file)
   - different portname! Please `pkg remove jackett` before installing!
   - different service name! Please use `jackettdotnet` for your `sysrc` settings (e.g., `sysrc jackettdotnet_enable=YES`)
   - uses `chown` in service file to set correct user assuming you installed the package as root
@@ -43,7 +43,7 @@ These port will also more accurately use the canonical default install locations
 - ~~tautulli 2.7.2 (version bump from 2.5.5, bump python to `USES=python:3.6+`)~~
   - REMOVED. PORT UPDATED.
 
-- prowlarr-0.1.1.978 (dotnet5 variant) (this can be updated via built-in updater)
+- prowlarr 0.1.1.978 (dotnet5 variant) (this can be updated via built-in updater)
   - If you are using a package of prowlarr from BEFORE 2021-09-16 then I suggest a fresh install. 
    - I changed where `prowlarr` stores its data. It can now be updated without giving warnings. CHECK THE RC FILE FOR THE NEW DEFAULTS!
    - It now uses `prowlarrdotnet` for service/pkg name.
