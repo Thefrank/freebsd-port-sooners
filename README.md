@@ -21,7 +21,7 @@ ALSO: Radarr and Prowlarr might be getting added to the official ports tree! See
   - If you are a/the port maintainer and would like to adopt this, please contact me for `Makefile`, `pkg-plist`, and `/files`
   - fixed cert install location (/usr/share -> /usr/local), fix build w/o NLS option
   - OPTIONS = BIGARRAY, MONOLITE, NLS, ODBC, SPECTRE, X11
-- MSBuild (for Mono!) 16.10.1.52401
+- MSBuild (for Mono!) 16.10.1.52401 (Tarball only, too lazy to update the mess that is the port)
   - from in mono/msbuild 63458bd6cb3a98b5a062bb18bd51ffdea4aa3001
   - no tests done. too lazy. `mono MSBuild.dll` work tho. glhf
 - sabnzbdplus 3.4.1
