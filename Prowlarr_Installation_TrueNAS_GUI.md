@@ -44,11 +44,11 @@ Download the version you want. You can find the releases of Prowlarr here: https
 
 You can just copy and paste the full download URL and `fetch` will be able to download it. Here is an example:
 
-`fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/20210821/prowlarr-0.1.1.875.txz`
+`fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/20211015/prowlarrdotnet-0.1.1.978.pkg`
 
 Now we install it:
 
-`pkg install prowlarr-0.1.1.875.txz`
+`pkg install prowlarrdotnet-0.1.1.978.pkg`
 
 Don't close the shell out yet we still have a few more things!
 
