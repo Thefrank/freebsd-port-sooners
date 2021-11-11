@@ -64,23 +64,23 @@ The service file uses `chown` to make sure prowlarr can update itself. This can 
 
 To enable the service:
 
-`sysrc prowlarr_enable=TRUE`
+`sysrc prowlarrdotnet_enable=TRUE`
 
 If you do not want to use user/group `prowlarr` you will need to tell the service file what user/group it should be running under
 
-`sysrc prowlarr_user="USER_YOU_WANT"`
+`sysrc prowlarrdotnet_user="USER_YOU_WANT"`
 
-`sysrc prowlarr_group="GROUP_YOU_WANT"`
+`sysrc prowlarrdotnet_group="GROUP_YOU_WANT"`
 
 `prowlarr` stores its data, config, logs, and PID files in `/usr/local/data/prowlarr` by default. The service file will create this and take ownership of it IF AND ONLY IF IT DOES NOT EXIST. If you want to store these files in a different place (e.g., a dataset mounted into the jail for easier snapshots) then you will need to change it using `sysrc`
 
-`sysrc prowlarr_data_dir="DIR_YOU_WANT"`
+`sysrc prowlarrdotnet_data_dir="DIR_YOU_WANT"`
 
 Reminder: If you are using an existing location then you will manually need to either: change the ownership to the UID/GID `prowlarr` uses AND/OR add `prowlarr` to a GID that has write access.
 
 Almost done, let's start the service:
 
-`service prowlarr start`
+`service prowlarrdotnet start`
 
 If everything went according to plan then prowlarr should be up and running on the IP of the jail (port 9696)!
 
