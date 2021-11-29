@@ -42,8 +42,8 @@ ALSO: Radarr and Prowlarr might be getting added to the official ports tree! See
 - ~~sonarr 3.0.6.1335 (mono) (`mono6.8>0:lang/mono6.8` instead of `USES=MONO`)~~
   - PORT NOW USES MONO6.8. REMOVED.
 
-- Ombi v4 (dotnet5 variant, experimental, binary only NO PKG OR SERVICE)
-  - PKG/RC coming soon!
+- Ombi v4.7.4 (dotnet6 variant, experimental)
+  - Now with PKG and Service!
 
 - jackett 0.19.228 (dotnet5 variant, experimental, installable txz + service file)
   - different portname! Please `pkg remove jackett` before installing!
