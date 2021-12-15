@@ -6,6 +6,7 @@ If you are not comfortable setting up a jail or using the shell please wait unti
 
 If you are installing from base FreeBSD you can adopt this guide as an general overview. TrueNAS uses `iocage` as jail manager so jail properties listed here will use its variable naming.
 
+Update 2021/12/15: Instructions updated as prowlarr is now in ports
 
 ## Jail Setup
 1. From the main screen select Jails
@@ -36,19 +37,9 @@ If you are installing from base FreeBSD you can adopt this guide as an general o
 
 Back on the jails list find your newly created jail for `prowlarr` and click "Shell"
 
-As FreeBSD lacks an official reserved UID/GID for Prowlarr we will need to create our own user and group for it
+To install Prowlarr
 
-`pw user add prowlarr -c prowlarr -u 349 -d /nonexistent -s /usr/bin/nologin`
-
-Download the version you want. You can find the releases of Prowlarr here: https://github.com/Thefrank/freebsd-port-sooners/releases
-
-You can just copy and paste the full download URL and `fetch` will be able to download it. Here is an example:
-
-`fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/20211015/prowlarrdotnet-0.1.1.978.pkg`
-
-Now we install it:
-
-`pkg install prowlarrdotnet-0.1.1.978.pkg`
+`pkg install prowlarr`
 
 Don't close the shell out yet we still have a few more things!
 
@@ -64,23 +55,23 @@ The service file uses `chown` to make sure prowlarr can update itself. This can 
 
 To enable the service:
 
-`sysrc prowlarrdotnet_enable=TRUE`
+`sysrc prowlarr_enable=TRUE`
 
 If you do not want to use user/group `prowlarr` you will need to tell the service file what user/group it should be running under
 
-`sysrc prowlarrdotnet_user="USER_YOU_WANT"`
+`sysrc prowlarr_user="USER_YOU_WANT"`
 
-`sysrc prowlarrdotnet_group="GROUP_YOU_WANT"`
+`sysrc prowlarr_group="GROUP_YOU_WANT"`
 
-`prowlarr` stores its data, config, logs, and PID files in `/usr/local/data/prowlarr` by default. The service file will create this and take ownership of it IF AND ONLY IF IT DOES NOT EXIST. If you want to store these files in a different place (e.g., a dataset mounted into the jail for easier snapshots) then you will need to change it using `sysrc`
+`prowlarr` stores its data, config, logs, and PID files in `/usr/local/prowlarr` by default. The service file will create this and take ownership of it IF AND ONLY IF IT DOES NOT EXIST. If you want to store these files in a different place (e.g., a dataset mounted into the jail for easier snapshots) then you will need to change it using `sysrc`
 
-`sysrc prowlarrdotnet_data_dir="DIR_YOU_WANT"`
+`sysrc prowlarr_data_dir="DIR_YOU_WANT"`
 
 Reminder: If you are using an existing location then you will manually need to either: change the ownership to the UID/GID `prowlarr` uses AND/OR add `prowlarr` to a GID that has write access.
 
 Almost done, let's start the service:
 
-`service prowlarrdotnet start`
+`service prowlarr start`
 
 If everything went according to plan then prowlarr should be up and running on the IP of the jail (port 9696)!
 
