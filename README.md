@@ -57,12 +57,8 @@ ALSO: Radarr and Prowlarr might be getting added to the official ports tree! See
   - REMOVED. PORT UPDATED.
 
 - prowlarr 0.1.1.978 (dotnet5 variant) (this can be updated via built-in updater)
-  - If you are using a package of prowlarr from BEFORE 2021-09-16 then I suggest a fresh install. 
-   - I changed where `prowlarr` stores its data. It can now be updated without giving warnings. CHECK THE RC FILE FOR THE NEW DEFAULTS!
-   - It now uses `prowlarrdotnet` for service/pkg name.
-  - This currently tracks "develop" as there is no stable release for this yet
-  - Now actually complies with `portfmt` and `portlint`
-  - More info: https://github.com/Prowlarr/Prowlarr
+  - REMOVED. Now in ports!
+  - https://www.freshports.org/net-p2p/prowlarr/
 
 ## What is NOT here:
 - Jellyfin. Please use the repo here: https://github.com/Thefrank/jellyfin-server-freebsd
