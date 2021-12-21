@@ -22,9 +22,12 @@ Update 2021/12/15: Instructions updated as prowlarr is now in ports
 6. Release: 12.2-Release (or newer)
 
 7. Configure Basic Properties to your liking
+- [x] VNET
+ (This is not required but you can run into networking issues if you do not have it on. See: Troubleshooting)
 
 8. Configure Jail Properties to your liking but add
 - [x] allow_raw_sockets
+ - (Not required but helpful for troubleshooting)
 - [x] allow_mlock
 
 9. Configure Network Properties to your liking
@@ -81,3 +84,4 @@ If everything went according to plan then prowlarr should be up and running on t
 ## Troubleshooting
  - `System.Net.Sockets.SocketException (43): Protocol not supported`
    - Make sure you have `VNET` turned on for your jail.
+   - If you do not want to use `VNET` then setting `ip6=inherit` for the jail should fix this.
