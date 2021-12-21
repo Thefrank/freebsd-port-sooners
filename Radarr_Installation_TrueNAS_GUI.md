@@ -22,9 +22,12 @@ This guide will use `radarrv3`. `radarrv3` and `radarrv3-devel` packages are not
 6. Release: 12.2-Release (or newer)
 
 7. Configure Basic Properties to your liking
+- [x] VNET
+ - (Not required but can cause issues if you do not. See: Troubleshooting)
 
 8. Configure Jail Properties to your liking but add
 - [x] allow_raw_sockets
+ - (Not required but helpful for troubleshooting)
 - [x] allow_mlock
 
 9. Configure Network Properties to your liking
@@ -81,3 +84,4 @@ If everything went according to plan then radarr should be up and running on the
 ## Troubleshooting
  - `System.Net.Sockets.SocketException (43): Protocol not supported`
    - Make sure you have `VNET` turned on for your jail.
+   - If you do not to use `VNET` then settings `ip6=inherit` should fix the issue.
