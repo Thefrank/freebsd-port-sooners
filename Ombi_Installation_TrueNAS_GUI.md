@@ -54,11 +54,11 @@ Download the version you want. You can find the releases of Ombi here: https://g
 
 You can just copy and paste the full download URL and `fetch` will be able to download it. Here is an example:
 
-`fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/20211129/ombi-4.7.4.pkg`
+`fetch https://github.com/Thefrank/freebsd-port-sooners/releases/download/20211221/ombi-4.7.11.pkg`
 
 Now we install it:
 
-`pkg install ombi-4.7.4.pkg`
+`pkg install ombi-4.7.11.pkg`
 
 Don't close the shell out yet we still have a few more things!
 
@@ -100,5 +100,6 @@ If everything went according to plan then Ombi should be up and running on the I
 ## Troubleshooting
  - `System.Net.Sockets.SocketException (43): Protocol not supported`
    - Make sure you have `VNET` turned on for your jail.
+   - If you do not use `VNET` then setting `ip6=inherit` for the jail should also fix this.
  - `libe_sqlite3` errors
    - In rare cases, the installer might fail to make the symbolic link needed to run Ombi. Try `ln -s /usr/local/lib/libsqlite3.so /usr/local/lib/libe_sqlite3.so`
