@@ -24,11 +24,12 @@ ALSO: Radarr and Prowlarr might be getting added to the official ports tree! See
 - MSBuild (for Mono!) 16.10.1.52401 (Tarball only, too lazy to update the mess that is the port)
   - from in mono/msbuild 63458bd6cb3a98b5a062bb18bd51ffdea4aa3001
   - no tests done. too lazy. `mono MSBuild.dll` work tho. glhf
-- sabnzbdplus 3.4.1
+- sabnzbdplus 3.4.2
   - Version bump. 
   - THIS USES THE NEW PKG FORMAT
-  - NOTE: This needs TWO python3 packages from pip that are not in ports: `puremagic` and `guessit`. You will need to `pkg install py38-pip` if you do not have it either
-   - `python3.8 -m pip install puremagic` && `python3.8 -m pip install guessit`. If you just want to copy/paste.
+  - FreeBSD 12.2 AMD64 ONLY. (Python 3.8)
+  - NOTE: This needs a python3 package from pip that is not in ports: `puremagic`. You will need to `pkg install py38-pip` if you do not have it either
+   - `python3.8 -m pip install puremagic`. If you just want to copy/paste.
 
 - radarr 3.2.2.5080 (dotnet5 variant) (this can be updated via built-in updater)
   - This now tracks "master"! Older versions tracked "nightly"!
