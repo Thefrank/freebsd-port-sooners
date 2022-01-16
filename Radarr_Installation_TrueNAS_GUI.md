@@ -4,6 +4,9 @@ Radarr's dotNET version currently does not use the plugin system that TrueNAS us
 
 If you are not comfortable setting up a jail or using the shell please wait until someone adds it to the community plugin libary.
 
+- [Watch Bug 259194 for Plugin Status updates for Radarr v3.2.2 on .Net](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=259194)
+- [Watch Bug 260920 for Plugin Status updates for Radarr v4.0 on .Net](https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=260920)
+
 If you are installing from base FreeBSD you can adopt this guide as an general overview. TrueNAS uses `iocage` as jail manager so jail properties listed here will use its variable naming.
 
 This guide will use `radarrv3`. `radarrv3` and `radarrv3-devel` packages are not compatible with eachother by design.
