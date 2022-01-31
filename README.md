@@ -12,8 +12,6 @@ They will use `pkg` as the file extension and require `pkg` >= 1.17.0.
 
 These port will also more accurately use the canonical default install locations. These changes will be noted for each port.
 
-ALSO: Radarr and Prowlarr might be getting added to the official ports tree! See https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=259194 and https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=259196
-
 ## What is here currently:
 - mono 6.13.0.1212 (tarball Tue Dec 21 19:40:42 UTC 2021)
   - Made from a NIGHTLY tarball. mono 6.12 still does not build cleanly under FreeBSD
@@ -31,14 +29,12 @@ ALSO: Radarr and Prowlarr might be getting added to the official ports tree! See
   - NOTE: This needs a python3 package from pip that is not in ports: `puremagic`. You will need to `pkg install py38-pip` if you do not have it either
    - `python3.8 -m pip install puremagic`. If you just want to copy/paste.
 
-- radarr 3.2.2.5080 (dotnet5 variant) (this can be updated via built-in updater)
-  - This now tracks "master"! Older versions tracked "nightly"!
-  - package named `radarrv3` as a way to deconflict with existing mono-based `radarr`
-   - still uses same name for service file to stop people from trying to install one over the other
-  - now actually complies with `portfmt` and `portlint`
- 
+- radarr v4 (dotnet6 variant)
+  - @mvanbaak is now the port maintainer and has brought it up to v4! TYVM!
+  - This is now in ports as a dotnet binary and can be built from there. Otherwise you can check: https://www.freshports.org/net-p2p/radarr/ to see what it lands on the pkg mirrors
+  
 - radarr-devel 3.1.0.4893 (dotnet5 variant) (this can be updated via built-in updater)
-  - This currently tracks "develop" to better match FreeBSD port naming
+  - Old. Removed.
 
 - ~~sonarr 3.0.6.1335 (mono) (`mono6.8>0:lang/mono6.8` instead of `USES=MONO`)~~
   - PORT NOW USES MONO6.8. REMOVED.
@@ -57,8 +53,8 @@ ALSO: Radarr and Prowlarr might be getting added to the official ports tree! See
 - ~~tautulli 2.7.2 (version bump from 2.5.5, bump python to `USES=python:3.6+`)~~
   - REMOVED. PORT UPDATED.
 
-- prowlarr 0.1.1.978 (dotnet5 variant) (this can be updated via built-in updater)
-  - REMOVED. Now in ports!
+- prowlarr 0.1.1 (dotnet6 variant) (this can be updated via built-in updater)
+  - REMOVED. Now in ports! TYVM @mvanbaak
   - https://www.freshports.org/net-p2p/prowlarr/
 
 ## What is NOT here:
