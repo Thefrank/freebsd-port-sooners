@@ -42,13 +42,13 @@ These port will also more accurately use the canonical default install locations
 - Ombi v4.7.11 (dotnet6 variant, experimental)
   - Now with PKG and Service!
 
-- jackett 0.19.228 (dotnet5 variant, experimental, installable txz + service file)
+- jackett 0.20.596 (dotnet6 variant, experimental, installable pkg + service file)
   - different portname! Please `pkg remove jackett` before installing!
   - different service name! Please use `jackettdotnet` for your `sysrc` settings (e.g., `sysrc jackettdotnet_enable=YES`)
   - uses `chown` in service file to set correct user assuming you installed the package as root
   - no way to update: dev currently does not build for FreeBSD so update check will always fail
   - THIS USES THE NEW PKG FORMAT
-  - This will see updates far less frequently that jackett actually updates
+  - This will see updates far less frequently than jackett actually updates
   
 - ~~tautulli 2.7.2 (version bump from 2.5.5, bump python to `USES=python:3.6+`)~~
   - REMOVED. PORT UPDATED.
