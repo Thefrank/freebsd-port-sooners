@@ -22,26 +22,9 @@ These port will also more accurately use the canonical default install locations
 - MSBuild (for Mono!) 16.10.1.52401 (Tarball only, too lazy to update the mess that is the port)
   - from in mono/msbuild 63458bd6cb3a98b5a062bb18bd51ffdea4aa3001
   - no tests done. too lazy. `mono MSBuild.dll` work tho. glhf
-- sabnzbdplus 3.4.2
-  - Version bump. 
-  - THIS USES THE NEW PKG FORMAT
-  - FreeBSD 12.2 AMD64 ONLY. (Python 3.8)
-  - NOTE: This needs a python3 package from pip that is not in ports: `puremagic`. You will need to `pkg install py38-pip` if you do not have it either
-   - `python3.8 -m pip install puremagic`. If you just want to copy/paste.
-
-- radarr v4 (dotnet6 variant)
-  - @mvanbaak is now the port maintainer and has brought it up to v4! TYVM!
-  - This is now in ports as a dotnet binary and can be built from there. Otherwise you can check: https://www.freshports.org/net-p2p/radarr/ to see what it lands on the pkg mirrors
-  
-- radarr-devel 3.1.0.4893 (dotnet5 variant) (this can be updated via built-in updater)
-  - Old. Removed.
-
-- ~~sonarr 3.0.6.1335 (mono) (`mono6.8>0:lang/mono6.8` instead of `USES=MONO`)~~
-  - PORT NOW USES MONO6.8. REMOVED.
-
-- Ombi v4.7.11 (dotnet6 variant, experimental)
+- Ombi v4.25.0 (dotnet6 variant, experimental)
   - Now with PKG and Service!
-
+  - Now also only for FreeBSD 13.1 (also works under TrueNAS CORE 13.1)
 - jackett 0.20.596 (dotnet6 variant, experimental, installable pkg + service file)
   - different portname! Please `pkg remove jackett` before installing!
   - different service name! Please use `jackettdotnet` for your `sysrc` settings (e.g., `sysrc jackettdotnet_enable=YES`)
@@ -49,15 +32,27 @@ These port will also more accurately use the canonical default install locations
   - no way to update: dev currently does not build for FreeBSD so update check will always fail
   - THIS USES THE NEW PKG FORMAT
   - This will see updates far less frequently than jackett actually updates
+## What is no longer here:
+- ~~sabnzbdplus 3.4.2~~
+  - Removed: Ports updated
+- ~~radarr v4 (dotnet6 variant)~~
+  - @mvanbaak is now the port maintainer and has brought it up to v4! TYVM!
+  - This is now in ports as a dotnet binary and can be built from there. Otherwise you can check: https://www.freshports.org/net-p2p/radarr/ to see what it lands on the pkg mirrors
+  
+- ~~radarr-devel 3.1.0.4893 (dotnet5 variant) (this can be updated via built-in updater)~~
+  - Old. Removed.
+
+- ~~sonarr 3.0.6.1335 (mono) (`mono6.8>0:lang/mono6.8` instead of `USES=MONO`)~~
+  - PORT NOW USES MONO6.8. REMOVED.
   
 - ~~tautulli 2.7.2 (version bump from 2.5.5, bump python to `USES=python:3.6+`)~~
   - REMOVED. PORT UPDATED.
 
-- prowlarr 0.1.1 (dotnet6 variant) (this can be updated via built-in updater)
+- ~~prowlarr 0.1.1 (dotnet6 variant) (this can be updated via built-in updater)~~
   - REMOVED. Now in ports! TYVM @mvanbaak
   - https://www.freshports.org/net-p2p/prowlarr/
 
-## What is NOT here:
+## Where is...?:
 - Jellyfin. Please use the repo here: https://github.com/Thefrank/jellyfin-server-freebsd
 
 ## Updates
