@@ -25,7 +25,7 @@ These port will also more accurately use the canonical default install locations
 - Ombi v4.25.0 (dotnet6 variant, experimental)
   - Now with PKG and Service!
   - Now also only for FreeBSD 13.1 (also works under TrueNAS CORE 13.1)
-- jackett 0.20.596 (dotnet6 variant, experimental, installable pkg + service file)
+- jackett 0.20.1913 (dotnet6 variant, experimental, installable pkg + service file)
   - different portname! Please `pkg remove jackett` before installing!
   - different service name! Please use `jackettdotnet` for your `sysrc` settings (e.g., `sysrc jackettdotnet_enable=YES`)
   - uses `chown` in service file to set correct user assuming you installed the package as root
