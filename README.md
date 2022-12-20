@@ -32,9 +32,10 @@ These port will also more accurately use the canonical default install locations
   - no way to update: dev currently does not build for FreeBSD so update check will always fail
   - THIS USES THE NEW PKG FORMAT
   - This will see updates far less frequently than jackett actually updates
-- Powershell v7.2.6 (FreeBSD x64 only) (no package)
+- Powershell v7.2.8 (FreeBSD x64 only) (no package)
   - This was not fun to build
   - Who would use this on *NIX?
+  - Can use as login shell if brave/foolish
 ## What is no longer here:
 - ~~sabnzbdplus 3.4.2~~
   - Removed: Ports updated
