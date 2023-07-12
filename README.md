@@ -19,6 +19,11 @@ These port will also more accurately use the canonical default install locations
   - If you are a/the port maintainer and would like to adopt this, please contact me for `Makefile`, `pkg-plist`, and `/files`
   - fixed cert install location (/usr/share -> /usr/local), fix build w/o NLS option
   - OPTIONS = BIGARRAY, MONOLITE, NLS, ODBC, SPECTRE, X11
+- mono 6.12.0.199 from (https://download.mono-project.com/sources/mono/preview/mono-6.12.0.199.tar.xz) ~ June 2023
+  - Patches from ports + partial backport of memfuncs from dotnet/runtime upstream
+  - FreeBSD 13.1+ AMD64 ONLY
+  - Default ports options used (same as above)
+  - Reports regression failures during `make test` but so does mono 6.10...
 - MSBuild (for Mono!) 16.10.1.52401 (Tarball only, too lazy to update the mess that is the port)
   - from in mono/msbuild 63458bd6cb3a98b5a062bb18bd51ffdea4aa3001
   - no tests done. too lazy. `mono MSBuild.dll` work tho. glhf
@@ -58,6 +63,7 @@ These port will also more accurately use the canonical default install locations
 
 ## Where is...?:
 - Jellyfin. Please use the repo here: https://github.com/Thefrank/jellyfin-server-freebsd
+  - This is also in ports for AMD64
 
 ## Updates
 Open a ticket if I fall behind on something. 
