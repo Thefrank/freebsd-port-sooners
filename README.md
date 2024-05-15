@@ -27,7 +27,7 @@ These port will also more accurately use the canonical default install locations
 - MSBuild (for Mono!) 16.10.1.52401 (Tarball only, too lazy to update the mess that is the port)
   - from in mono/msbuild 63458bd6cb3a98b5a062bb18bd51ffdea4aa3001
   - no tests done. too lazy. `mono MSBuild.dll` work tho. glhf
-- Ombi v4.35.18 (dotnet6 variant, experimental)
+- Ombi v4.43.20 (dotnet8 variant, experimental)
   - Now with PKG and Service!
   - Now also only for FreeBSD 13.1+ (also works under TrueNAS CORE 13.1+)
 - jackett 0.20.1913 (dotnet6 variant, experimental, installable pkg + service file)
