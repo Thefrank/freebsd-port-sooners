@@ -13,6 +13,9 @@ They will use `pkg` as the file extension and require `pkg` >= 1.17.0.
 These port will also more accurately use the canonical default install locations. These changes will be noted for each port.
 
 ## What is here currently:
+- libsecret 0.21.2 (version bump, built with `poudriere` for FreeBSD 14.1)
+  - 0.20.5 in ports.
+  - 0.21.3 and higher uses `-D_GNU_SOURCE` and I am too lazy to un GNU it.
 - mono 6.13.0.1212 (tarball Tue Dec 21 19:40:42 UTC 2021)
   - Made from a NIGHTLY tarball. mono 6.12 still does not build cleanly under FreeBSD
   - PROOF OF CONCEPT. FREEBSD 12.2 AMD64 ONLY!
